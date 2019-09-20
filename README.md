@@ -20,7 +20,7 @@
 
 To start the test program: 
 
-    ./testing/test_webcam.py
+    python -m testing.test_webcam
 
 To exit from the test program: 
 
@@ -32,11 +32,11 @@ Parameter Description
     
 1.current_model, file of model, such as:
 
-    current_model = "../model/facial_landmark_cnn.pb"
+    current_model = "model/facial_landmark_cnn.pb"
 
 2.VIDEO_PATH, video file path, such as:
 
-    VIDEO_PATH = "../data/vid.avi" 
+    VIDEO_PATH = "data/vid.avi" 
 
 or 
 
