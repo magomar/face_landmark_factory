@@ -69,9 +69,10 @@ def webcam_main():
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-#    current_model = "../model/facial_landmark_cnn.h5"
-    current_model = "../model/facial_landmark_SqueezeNet.pb"
-    VIDEO_PATH = "../data/vid.avi"
-#    VIDEO_PATH = 0
+    os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
+    current_model = "model/facial_landmark_cnn.h5"
+#    current_model = "model/facial_landmark_SqueezeNet.pb"
+#    VIDEO_PATH = "data/vid.avi"
+    VIDEO_PATH = 0
     CNN_INPUT_SIZE = 64
     webcam_main()
