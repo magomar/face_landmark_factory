@@ -1,3 +1,12 @@
 {
-    "python.pythonPath": "/home/mario/miniconda3/envs/tf/bin/python"
+    "python.pythonPath": "/home/mario/.pyenv/versions/tf/bin/python",
+    "python.linting.pylintPath": "/home/mario/miniconda3/envs/tf/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": false,
+    "python.formatting.provider": "autopep8",
+    "autoDocstring.docstringFormat": "numpy",
+    "autoDocstring.includeDescription": true,
+    "autoDocstring.includeName": false,
+    "autoDocstring.newlineBeforeSummary": false,
+    "python.linting.flake8Enabled": true
 }

@@ -18,18 +18,18 @@
 
 ## Quick Start
 
-To start the test program: 
+To start the test program:
 
-    ./testing/test_webcam.py
+    python -m testing.test_webcam
 
-To exit from the test program: 
+To exit from the test program:
 
     Press q
 
 (Note: test_webcam.py reads the local video file vid.avi by default. If you have a camera with your PC, and want to use the camera as the input source of the test program, you need to modify the value of pamameter "VIDEO_PATH".)
 
 Parameter Description
-    
+
 1.current_model, file of model, such as:
 
     current_model = "../model/facial_landmark_cnn.pb"
@@ -38,7 +38,7 @@ Parameter Description
 
     VIDEO_PATH = "../data/vid.avi" 
 
-or 
+or
 
     VIDEO_PATH = 0 
 
@@ -114,7 +114,7 @@ CNN_INPUT_SIZE, input image size of neural network, height and width are the sam
 Parameter Description
 
 INPUT_LIST, the list of directories storing pts annotation files, such as:
-    
+
     INPUT_LIST = ["../data/out"]
 
 OUTPUT_DIR, the directory storing files of the facial box dimensions and the files of facial landmarks in json format, such as:
@@ -124,11 +124,11 @@ OUTPUT_DIR, the directory storing files of the facial box dimensions and the fil
 - ./data_generate/manual_correct_label.py
 
     This tool can help to modify the dimensions of the facial landmark manually. This tool reads files of original image, files of facial box dimensions in jason format, and files of facial landmark, and display images of the facial box and landmarks that has been marked. Users can modify dimensions of the landmark with a keyboard. Facial landmarks are manually corrected, and files with modified facial dimensions and face landmarks are generated finally.
-    
+
 Parameter Description
 
 INPUT_DIR, the directory storing files of facial dimensions and the files of facial landmarks, such as:
-    
+
     INPUT_DIR = "../data/json"
 
 Instructions for correcting the facial landmarks with keyboard (requires activation of the window by click the right button):
@@ -186,7 +186,7 @@ OUTPUT_DIR, the directory storing the files of augment datasets, such as:
 - ./data_generate/gen_tfrecord.py
 
     This tool reads the dataset of a given directory and generates files in tfrecords format  for tensorflow training.
-    
+
 input_list, a list fo directories storing data sets, such as:
 
     input_list = ["../data/json","../data/json01"]
@@ -233,9 +233,9 @@ IMAGE_SIZE, image pixel value (length and width values are the same), such as:
 
     IMAGE_SIZE = 64
 
-(Note: Tool training newly generated facial landmark detection model file path: ../model/facial_landmark_SqueezeNet.h5) 
+(Note: Tool training newly generated facial landmark detection model file path: ../model/facial_landmark_SqueezeNet.h5)
 
-###<a name="4">Model Conversion</a>
+### <a name="4">Model Conversion</a>
 
 - ./model_converter/h5_to_pb.py,
 
@@ -244,7 +244,6 @@ IMAGE_SIZE, image pixel value (length and width values are the same), such as:
 - ./model_converter/to_tflite.sh,
 
     This tool converts pb model files into tflite model files.
-
 
 ### <a name="5">Model Testing</a>
 
